@@ -1,1 +1,1 @@
-Learning design pattern by case code.
+Learning design pattern by cases.
