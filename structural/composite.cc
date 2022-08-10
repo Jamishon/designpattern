@@ -11,6 +11,8 @@
  *
  */
 #include <iostream>
+#include <map>
+#include <queue>
 #include <stack>
 #include <vector>
 
@@ -116,7 +118,129 @@ void PreOrderTraversalRecursive(Component* root) {
   }
 }
 
+void LevelOrderTraversal(Component* root) {
+  if (root) {
+    Component* current = NULL;
+    Component* pc = NULL;
+    int index = 0;
+    std::queue<Component*> queue;
+    queue.push(root);
+    do {
+      current = queue.front();
+      queue.pop();
 
+      current->Operation();
+      
+      index = 0;
+      while (pc = current->GetChild(index++)) {
+        queue.push(pc);
+      }
+
+    } while (!queue.empty());
+  }
+}
+
+void PreOrderTraversal(Component* root) {
+  if (root) {
+    Component* current = root;
+    std::stack<Component*> stack;
+    do {
+      int index = 0;
+      Component* pc = NULL;
+      current->Operation();
+      if (pc = current->GetChild(index++)) {
+        std::vector<Component*> temp;
+        while (pc = current->GetChild(index++)) {
+          temp.push_back(pc);
+        }
+
+        for (std::vector<Component*>::iterator it = temp.end() - 1;
+             it >= temp.begin(); it--) {
+          stack.push(*it);
+        }
+
+        current = current->GetChild(0);
+      } else {
+        if (!stack.empty()) {
+          current = stack.top();
+          stack.pop();
+        } else {
+          current = NULL;
+        }
+      }
+    } while (!stack.empty() || current != NULL);
+  }
+}
+
+void PostOrderTraversal(Component* root) {
+  if (root) {
+    Component* current = root;
+    std::stack<Component*> stack;
+    std::map<Component*, int> visisted;
+    do {
+      int index = 0;
+      Component* pc = NULL;
+
+      if (pc = current->GetChild(index)) {
+        std::vector<Component*> temp;
+        while (pc = current->GetChild(index++)) {
+          temp.push_back(pc);
+        }
+
+        int last = temp.size();
+        Component* plast = temp.at(last - 1);
+        std::map<Component*, int>::iterator it = visisted.find(plast);
+        bool visist = false;
+        if (it != visisted.end()) {
+          if (it->second != 0) visist = true;
+        } else {
+          visisted.insert(std::pair<Component*, int>(plast, 0));
+        }
+
+        if (visist) {
+          current->Operation();
+          std::map<Component*, int>::iterator itr = visisted.find(plast);
+          if (itr != visisted.end()) {
+            visisted.erase(it);
+            visisted.insert(std::pair<Component*, int>(itr->first, 1));
+          }
+
+          if (!stack.empty()) {
+            current = stack.top();
+            stack.pop();
+          } else {
+            current = NULL;
+          }
+
+        } else {
+          stack.push(current);
+
+          temp.erase(temp.begin());
+          for (std::vector<Component*>::iterator it = temp.end() - 1;
+               it >= temp.begin(); it--) {
+            stack.push(*it);
+          }
+          current = current->GetChild(0);
+        }
+      } else {
+        current->Operation();
+
+        std::map<Component*, int>::iterator it = visisted.find(current);
+        if (it != visisted.end()) {
+          visisted.erase(it);
+          visisted.insert(std::pair<Component*, int>(it->first, 1));
+        }
+
+        if (!stack.empty()) {
+          current = stack.top();
+          stack.pop();
+        } else {
+          current = NULL;
+        }
+      }
+    } while (current != NULL || !stack.empty());
+  }
+}
 
 int main() {
   Component* root = new Composite("root a");
@@ -137,5 +261,11 @@ int main() {
   PostOrderTraversalRecursive(root);
   std::cout << std::endl;
 
-  
+  PreOrderTraversal(root);
+  std::cout << std::endl;
+  PostOrderTraversal(root);
+  std::cout << std::endl;
+
+  LevelOrderTraversal(root);
+  std::cout << std::endl;
 }
