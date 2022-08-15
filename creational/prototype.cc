@@ -2,7 +2,7 @@
  * @file prototype.cc
  * @author your name (you@domain.com)
  * @brief Roles: Prototype, ConcretePrototype, Client
- *        Clone classes by themselves   
+ *        Clone Objects by themselves   
  * @version 0.1
  * @date 2022-08-07
  * 
