@@ -139,7 +139,6 @@ int main() {
     pRequest->request_id_ = Request::kSound;
     p4->HandlerRequest(pRequest);
 
-
     delete p1;
     delete p2;
     delete p3;
