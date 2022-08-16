@@ -1,8 +1,8 @@
 /**
  * @file proxy.cc
  * @author Jamishon
- * @brief Roles:Proxy, Subject, RealSubject.
- *        Using Proxy to access the object.
+ * @brief Roles: Proxy, Subject, RealSubject.
+ *        Tips: Using Proxy to access the object.
  * @version 0.1
  * @date 2022-08-15
  *

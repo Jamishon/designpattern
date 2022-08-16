@@ -2,7 +2,9 @@
  * @file abstract_factory.cc
  * 
  * @author Jamihon
- * @brief 5 roles: AbstractFactory,ConcreteFactory,AbstractProduct,ConcreProduct,client
+ * @brief Roles: AbstractFactory, ConcreteFactory, 
+ *               AbstractProduct, ConcreProduct, client.
+ *        Tips: Offer interface which create lots of Object with dependcy
  * @version 0.1
  * @date 2022-08-02
  * 

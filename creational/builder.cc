@@ -2,7 +2,7 @@
  * @file builder.cc
  * @author your name (you@domain.com)
  * @brief Roles: Driector, Builder, ConcreteBuilder, Product. 
- *        Summarize: Object creation and performace are separated.
+ *        Tips: Object creation and performace are separated.
  * @version 0.1
  * @date 2022-08-05
  * 

@@ -1,8 +1,9 @@
 /**
  * @file bridge.cc
  * @author Jamishon
- * @brief Roles:Abstraction, RedefinedAbstraction, Implementor,
- * ConcreteImplementor. Separate the abstract parts from the implementation, and
+ * @brief Roles: Abstraction, RedefinedAbstraction, Implementor,
+ * ConcreteImplementor. 
+ *        Tips: Separate the abstract parts from the implementation, and
  * can change themselves independently.
  * @version 0.1
  * @date 2022-08-08

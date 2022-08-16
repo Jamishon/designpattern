@@ -1,8 +1,8 @@
 /**
  * @file facade.cc
  * @author Jamishon
- * @brief Roles:Facede, Subsystem classes.
- *        Give out a consistent interface for multiple interfaces.
+ * @brief Roles: Facede, Subsystem classes.
+ *        Tips: Give out a consistent interface for multiple interfaces.
  * @version 0.1
  * @date 2022-08-13
  *

@@ -2,7 +2,7 @@
  * @file adapter.cc
  * @author Jamishon
  * @brief Roles: Client, Target, Adapter, Adaptee
- *        Client calls operation on the adapter, then adapter calls the
+ *        Tips: Client calls operation on the adapter, then adapter calls the
  * function in the adaptee to implement this operation.
  * @version 0.1
  * @date 2022-08-07

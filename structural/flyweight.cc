@@ -1,9 +1,9 @@
 /**
  * @file flyweight.cc
  * @author Jamishon
- * @brief Roles:Flyweight, ConcreteFlyWeight, UnsharedConcreteFlyweight,
+ * @brief Roles: Flyweight, ConcreteFlyWeight, UnsharedConcreteFlyweight,
  * FlyweihtFactory, Client.
- *        Efficiently support a large number of intensively
+ *        Tips: Efficiently support a large number of intensively
  * used objects using sharing techniques.
  * @version 0.1
  * @date 2022-08-15

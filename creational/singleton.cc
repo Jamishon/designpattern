@@ -1,7 +1,8 @@
 /**
  * @file singleton.cc
  * @author Jamishon
- * @brief Singleton
+ * @brief Role: Singleton.
+ *        Tips: Only one.
  * @version 0.1
  * @date 2022-08-03
  *

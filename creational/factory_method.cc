@@ -1,6 +1,13 @@
 /**
- * Factory Method
+ * @file factory_method.cc
+ * @author Jamishon
+ * @brief Roles: AbstractFactory, ConcreteFactory, AbstractProduct,
+ *               ConcreteProduct, Client.
+ *        Tips: Delay the class instance into the subclass.
+ * @version 0.1
+ * @date 2022-08-01
  * 
+ * @copyright Copyright (c) 2022
  * 
  */
 

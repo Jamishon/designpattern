@@ -1,8 +1,8 @@
 /**
  * @file decorator.cc
  * @author Jamishon
- * @brief Roles:Component, ConcreteComponent, Decorator, ConcreteDecorator.
- *        Dynamically add additional responsibilities to objects.
+ * @brief Roles: Component, ConcreteComponent, Decorator, ConcreteDecorator.
+ *        Tips: Dynamically add additional responsibilities to objects.
  * @version 0.1
  * @date 2022-08-12
  *

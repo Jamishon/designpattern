@@ -1,8 +1,8 @@
 /**
  * @file composite.cc
  * @author Jamishon
- * @brief 4 Roles: Component, Leaf, Composite, Client.
- *        Objects are organized in to a tree-like structure,
+ * @brief Roles: Component, Leaf, Composite, Client.
+ *        Tips: Objects are organized in to a tree-like structure,
  *        and whloe-part objects have the consistent actions.
  * @version 0.1
  * @date 2022-08-09
